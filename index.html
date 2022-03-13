@@ -1,0 +1,143 @@
+final project 2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy Math</title>
+    <style>
+        .easy-math{ 
+                display: block;
+                padding: 30px;
+                margin: 30px 400px;  
+border: none;
+border-radius: 10px;
+background: linear-gradient(to top, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);}
+
+h1 { font-size: 30px;
+    margin-left:20px;
+    margin-bottom: 0px;
+}
+
+        h2{text-align: center;
+    font-size: 48px;
+    margin: 0 auto;
+    padding:  10px 100px  ;
+    border: 1px solid black;
+    border-radius: 10px;
+font-weight: bold;
+max-width: 40%;
+}
+
+h3 {text-align: center;
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+a{color:#f95959;
+font-size: 20px;
+text-decoration: none;}
+
+a:hover{text-decoration: underline;}
+
+        .level{color: #f70776;}
+
+        .course{color: #f70776;}
+
+        .introduce{ color: #fff;
+            font-style: italic;
+        font-size: 25px;
+    }
+
+    .contact{font-size: 30px;
+    text-align: center;
+}
+
+    .brand{border: none;
+    border-radius: 50%;
+    width: 120px;
+    display: inline-block;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.newButton{background: lavenderblush;}
+        img{display: block;
+        border: noun;
+    border-radius: 4px;
+    margin: 40px auto;
+    padding: 30px  ;
+max-width: 50%;}
+
+button{ display: block;
+    font-size: 25px;
+margin: 30px auto;
+font-style:italic;
+transition: opacity 200ms ease;
+    cursor: pointer;
+color:black;
+font-family:cursive; 
+background: rgb(86, 255, 248);
+padding: 20px;
+border: 1px solid black;
+border-radius: 30px;
+box-shadow:9px 9px 5px #000 ;}
+
+button:hover{ opacity: 0.77;}
+
+    </style>
+</head>
+<body>
+    <div class=easy-math>
+         <h1>Easy Math </h1>
+         <img class="brand" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/020/873/original/46ad99b0-1814-49f0-b379-9277bdd28162.jpg?1636651077" width="100px"/>
+    <h2>
+        Enjoy Mathematics
+    </h2>
+    <h3>
+
+        <div> 
+           Teaching <span class= level>Primary</span> school <span class=course>Mathemetics</span>
+            </div> 
+    </h3>
+    <hr>
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/020/870/original/simple-math-problems-702x336.jpeg?1636648490" width="700"/>
+    <p class="introduce">
+        I am Najme Babai and have been working as a math teacher for more than 10 years now.
+         I have experience in teaching at different levels of education including primary, secondary, and high school. 
+         However, I am specialized in teaching primary mathematics with the latest methodes and I am proud to have been selected as a successful teacher at the Top Teaching Festival.
+    </p>
+    <a href="https://www.linkedin.com/in/najme-babai-55a290168/" target="linkedIn">
+        Read more about me on linkedIn
+            </a>
+            <hr>
+
+    <p class="contact">
+        <strong>
+        I'm here to put an end to your kids' math learning problems.
+        <br> You are just a click away from easy math learning.
+        </strong>
+    </p>
+    <button>
+        Apply now
+    </button>
+    </div>
+
+    <script>
+         function updateButton( newButton){let Button=document.querySelector("button");
+        Button.innerHTML=newButton}
+        function canApply(){ let age= prompt("how old is student");
+    if (age<12){return true;} else{return false;}}
+
+        function apply(){ let name=prompt("what is student's name?");
+        if (canApply()){  let email= prompt("What is your Email address?");
+            updateButton( "thank you "+name+ "! I will reach out to you as soon as possible");
+  
+} else {updateButton("Sorry "+name+",you cann't apply");}}
+
+        let applyButton= document.querySelector("button")
+        applyButton.addEventListener("click",apply);
+    </script>
+</body>
+</html>
